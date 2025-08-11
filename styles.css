@@ -1,0 +1,497 @@
+/* Custom CSS for Conect+ Website */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(123, 44, 191, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(123, 44, 191, 0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s infinite;
+}
+
+/* Custom button styles */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(123, 44, 191, 0.3);
+}
+
+/* Service cards hover effects */
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+}
+
+/* Portfolio slider */
+.portfolio-slider {
+    overflow: hidden;
+}
+
+.portfolio-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .portfolio-item {
+        flex: 0 0 33.333%;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #7B2CBF, #FF4F79);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #6a1b9a, #e91e63);
+}
+
+/* Form focus states */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(123, 44, 191, 0.1);
+    border-color: #7B2CBF;
+}
+
+/* Loading states */
+.loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #7B2CBF;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Enhanced counter visibility and styling */
+[data-counter] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    position: relative;
+    z-index: 10;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Ensure metrics section has proper contrast */
+.bg-gradient-to-r [data-counter] {
+    background: linear-gradient(135deg, #7B2CBF, #FF4F79);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: contrast(1.2);
+}
+
+/* Fallback for browsers without gradient text support */
+@supports not (-webkit-background-clip: text) {
+    .bg-gradient-to-r [data-counter] {
+        color: #7B2CBF !important;
+        background: none;
+        -webkit-text-fill-color: unset;
+    }
+}
+
+/* Intersection Observer animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom gradient backgrounds */
+.gradient-bg-1 {
+    background: linear-gradient(135deg, #7B2CBF 0%, #FF4F79 100%);
+}
+
+.gradient-bg-2 {
+    background: linear-gradient(135deg, #FF4F79 0%, #FFA552 100%);
+}
+
+.gradient-bg-3 {
+    background: linear-gradient(135deg, #7B2CBF 0%, #5B5F97 50%, #FF4F79 100%);
+}
+
+/* Text gradient */
+.text-gradient {
+    background: linear-gradient(135deg, #7B2CBF 0%, #FF4F79 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Mobile menu animation */
+.mobile-menu-enter {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Counter animation */
+.counter {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Parallax effect */
+.parallax {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Custom shadows */
+.shadow-primary {
+    box-shadow: 0 10px 25px rgba(123, 44, 191, 0.15);
+}
+
+.shadow-secondary {
+    box-shadow: 0 10px 25px rgba(255, 79, 121, 0.15);
+}
+
+/* Image optimizations */
+.hero-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(123, 44, 191, 0.1) 0%, transparent 50%, rgba(255, 79, 121, 0.1) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Responsive image containers */
+.responsive-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.responsive-image:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    /* Hero section mobile optimizations */
+    #inicio {
+        min-height: auto !important;
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+    }
+    
+    /* Mobile-specific image heights */
+    .hero-image-mobile {
+        height: 40vh;
+        min-height: 300px;
+    }
+    
+    .about-image-mobile {
+        height: 300px;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1024px) {
+    .hero-image-desktop {
+        height: 70vh;
+        max-height: 600px;
+    }
+    
+    .about-image-desktop {
+        height: 480px;
+    }
+}
+
+/* Image loading states */
+.image-loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Performance optimizations */
+.gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .bg-gradient-to-r {
+        background: #7B2CBF !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Custom focus indicators for accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #7B2CBF;
+    outline-offset: 2px;
+}
+
+/* Footer link hover effects */
+footer a:hover {
+    color: #FF4F79 !important;
+    transition: color 0.3s ease;
+}
+
+/* Footer social icons hover */
+footer .social-links a:hover {
+    background: linear-gradient(135deg, #7B2CBF 0%, #FF4F79 100%);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Loading skeleton */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Custom selection */
+::selection {
+    background: rgba(123, 44, 191, 0.2);
+    color: #7B2CBF;
+}
+
+::-moz-selection {
+    background: rgba(123, 44, 191, 0.2);
+    color: #7B2CBF;
+}
+
+/* Form validation styles */
+.form-field-error {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+.form-field-success {
+    border-color: #10b981 !important;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1) !important;
+}
+
+/* Enhanced form styles */
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: #7B2CBF;
+    box-shadow: 0 0 0 3px rgba(123, 44, 191, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-form input:valid,
+.contact-form textarea:valid,
+.contact-form select:valid {
+    border-color: #10b981;
+}
+
+/* Loading button enhancement */
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Notification improvements */
+.notification {
+    backdrop-filter: blur(10px);
+    border-left: 4px solid;
+}
+
+.notification.success {
+    border-left-color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.notification.error {
+    border-left-color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.notification.info {
+    border-left-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+}

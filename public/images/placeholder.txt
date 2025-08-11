@@ -1,0 +1,8 @@
+Placeholders para imagens:
+
+1. hero-conect.jpg - Segunda foto fornecida (equipe celebrando resultados)
+2. about-conect.webp - Primeira foto fornecida (apresentação com gráficos)
+
+As imagens devem ser colocadas neste diretório com os nomes específicos acima.
+
+
