@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "slug": "o-poder-do-video-marketing-2024",
+      "title": "O Poder do Vídeo Marketing em 2024",
+      "dateISO": "2024-01-08",
+      "dateText": "08 Jan 2024",
+      "metaDescription": "Entenda por que o vídeo marketing é essencial em 2024, tipos de vídeos que convertem e dicas para produzir com qualidade.",
+      "heroImage": "../public/images/hero-conect.jpg",
+      "heroAlt": "Equipe gravando conteúdo em vídeo para redes",
+      "contentHtml": "<p>Vídeo segue como o formato mais consumido nas redes, impulsionando alcance, retenção e conversões.</p><h2>Tipos de Vídeo que Funcionam</h2><ul><li>Reels/Shorts educativos e rápidos.</li><li>Tutoriais e demonstrações.</li><li>Depoimentos de clientes.</li><li>Bastidores e cultura de marca.</li><li>Lives com interação.</li></ul><h2>Dicas Práticas</h2><ol><li>Capriche nos 3 primeiros segundos.</li><li>Use legendas e formatos verticais.</li><li>Mantenha boa iluminação e áudio claro.</li><li>Finalize com CTA e links rastreáveis.</li><li>Acompanhe métricas e itere constantemente.</li></ol>"
+    },
+    {
+      "slug": "como-medir-roi-em-campanhas-digitais",
+      "title": "Como Medir ROI em Campanhas Digitais",
+      "dateISO": "2024-01-12",
+      "dateText": "12 Jan 2024",
+      "metaDescription": "Aprenda a calcular e otimizar o ROI das suas campanhas digitais com fórmula, exemplos práticos e dicas.",
+      "heroImage": "../public/images/GRAFICOS.webp",
+      "heroAlt": "Gráficos demonstrando análise de ROI",
+      "contentHtml": "<p>Medir o ROI (Retorno sobre Investimento) é essencial para entender a eficiência das suas ações de marketing e justificar investimentos futuros.</p><h2>Fórmula do ROI</h2><div><strong>ROI = ((Receita - Custo) / Custo) × 100%</strong></div><h2>Exemplo Numérico</h2><p>Investimento de R$ 5.000,00 em anúncios gerando R$ 15.000,00 em receita.</p><ul><li>Receita: R$ 15.000,00</li><li>Custo: R$ 5.000,00</li><li>ROI = ((15.000 - 5.000) / 5.000) × 100% = 200%</li></ul><h2>5 Dicas para Otimizar o ROI</h2><ol><li><strong>Defina metas claras</strong>: KPIs alinhados ao funil.</li><li><strong>Rastreie corretamente</strong>: UTMs e conversões.</li><li><strong>Segmente melhor</strong>: criativos e públicos específicos.</li><li><strong>Teste A/B</strong>: criativos, ofertas e páginas.</li><li><strong>Otimize orçamento</strong>: priorize o que performa melhor.</li></ol>"
+    },
+    {
+      "slug": "10-tendencias-de-social-media-2024",
+      "title": "10 Tendências de Social Media para 2024",
+      "dateISO": "2024-01-15",
+      "dateText": "15 Jan 2024",
+      "metaDescription": "Confira 10 tendências de social media para 2024 e como aplicá-las na sua estratégia.",
+      "heroImage": "../public/images/about-conect.webp",
+      "heroAlt": "Equipe analisando tendências de redes sociais",
+      "contentHtml": "<p>As redes sociais seguem evoluindo rapidamente. Em 2024, marcas precisam ser ágeis, autênticas e orientadas por dados.</p><ol><li>Conteúdo curto e direto (Reels, Shorts).</li><li>Social commerce e live shopping.</li><li>UGC e comunidades.</li><li>IA em atendimento e conteúdo.</li><li>Privacidade e transparência.</li><li>Influenciadores nichados.</li><li>SEO para redes.</li><li>Formatos interativos.</li><li>Personalização.</li><li>Métricas de valor.</li></ol><p>Comece pequeno e escale o que performar melhor.</p>"
+    }
+  ]
+}
+
+

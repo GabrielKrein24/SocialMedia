@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post | Conect+ Blog</title>
+  <meta name="description" content="" id="meta-description" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="font-sans bg-neutral text-gray-800">
+  <div class="w-full bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="../index.html#blog" class="text-primary font-semibold hover:underline" aria-label="Voltar para a seção Blog">← Voltar para o blog</a>
+      <span class="text-gray-500 text-sm">Conect+ Blog</span>
+    </div>
+  </div>
+
+  <nav class="container mx-auto px-6 mt-4 text-sm text-gray-600" aria-label="breadcrumb">
+    <ol class="flex items-center space-x-2">
+      <li><a href="../index.html" class="hover:text-primary hover:underline">Início</a></li>
+      <li aria-hidden="true">›</li>
+      <li><a href="../index.html#blog" class="hover:text-primary hover:underline">Blog</a></li>
+      <li aria-hidden="true">›</li>
+      <li class="text-gray-800" id="breadcrumb-title" aria-current="page">Post</li>
+    </ol>
+  </nav>
+
+  <main class="container mx-auto px-6 py-10">
+    <article class="max-w-3xl mx-auto" id="post-container">
+      <header class="mb-6">
+        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight mb-2" id="post-title">Carregando...</h1>
+        <div class="flex items-center text-gray-500 text-sm">
+          <i class="fas fa-calendar-alt mr-2"></i>
+          <time id="post-date" datetime=""></time>
+        </div>
+      </header>
+
+      <div class="rounded-2xl overflow-hidden shadow-lg mb-8 bg-gradient-to-br from-primary/10 to-secondary/10" id="hero-wrapper" hidden>
+        <div class="w-full h-56 md:h-72 relative flex items-center justify-center">
+          <img id="hero-image" src="" alt="" class="w-full h-full object-cover" width="1200" height="800">
+          <div class="absolute inset-0 bg-gradient-to-br from-white/0 to-white/20"></div>
+        </div>
+      </div>
+
+      <section class="prose prose-lg max-w-none" id="post-content"></section>
+
+      <nav class="mt-12 pt-6 border-t border-gray-200 flex items-center justify-between" aria-label="Navegação de posts">
+        <a id="prev-link" href="#" class="text-primary font-semibold hover:underline" style="visibility: hidden;">← Anterior</a>
+        <a id="next-link" href="#" class="text-primary font-semibold hover:underline" style="visibility: hidden;">Próximo →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="py-8 text-center text-gray-500">
+    <p>&copy; 2024 Conect+. Todos os direitos reservados.</p>
+  </footer>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script>
+    async function loadPost() {
+      const params = new URLSearchParams(location.search);
+      const slug = params.get('slug');
+      if (!slug) {
+        renderNotFound('Slug ausente.');
+        return;
+      }
+      try {
+        const res = await fetch('./posts.json');
+        const data = await res.json();
+        const idx = data.posts.findIndex(p => p.slug === slug);
+        if (idx === -1) {
+          renderNotFound('Post não encontrado.');
+          return;
+        }
+        const post = data.posts[idx];
+
+        // SEO
+        document.title = `${post.title} | Conect+ Blog`;
+        const meta = document.getElementById('meta-description');
+        if (meta) meta.setAttribute('content', post.metaDescription || '');
+
+        // Breadcrumb
+        document.getElementById('breadcrumb-title').textContent = post.title;
+
+        // Header
+        document.getElementById('post-title').textContent = post.title;
+        const timeEl = document.getElementById('post-date');
+        timeEl.textContent = post.dateText;
+        timeEl.setAttribute('datetime', post.dateISO);
+
+        // Hero
+        if (post.heroImage) {
+          const heroWrapper = document.getElementById('hero-wrapper');
+          const heroImg = document.getElementById('hero-image');
+          heroImg.src = post.heroImage;
+          heroImg.alt = post.heroAlt || '';
+          heroWrapper.hidden = false;
+        }
+
+        // Content
+        document.getElementById('post-content').innerHTML = post.contentHtml;
+
+        // Prev/Next
+        if (data.posts[idx - 1]) {
+          const prev = data.posts[idx - 1];
+          const prevLink = document.getElementById('prev-link');
+          prevLink.href = `./post.html?slug=${prev.slug}`;
+          prevLink.style.visibility = 'visible';
+          prevLink.setAttribute('aria-label', `Post anterior: ${prev.title}`);
+        }
+        if (data.posts[idx + 1]) {
+          const next = data.posts[idx + 1];
+          const nextLink = document.getElementById('next-link');
+          nextLink.href = `./post.html?slug=${next.slug}`;
+          nextLink.style.visibility = 'visible';
+          nextLink.setAttribute('aria-label', `Próximo post: ${next.title}`);
+        }
+      } catch (e) {
+        renderNotFound('Erro ao carregar o conteúdo.');
+      }
+    }
+
+    function renderNotFound(msg) {
+      document.getElementById('post-title').textContent = 'Post não encontrado';
+      document.getElementById('post-content').innerHTML = `<p class="text-gray-600">${msg}</p><p class="mt-4"><a class="text-primary font-semibold hover:underline" href="../index.html#blog">← Voltar para o blog</a></p>`;
+    }
+
+    document.addEventListener('DOMContentLoaded', loadPost);
+  </script>
+</body>
+</html>
+
+
