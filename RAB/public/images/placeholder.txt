@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Placeholders para imagens:
 
 1. hero-conect.jpg - Segunda foto fornecida (equipe celebrando resultados)
@@ -5,3 +6,12 @@ Placeholders para imagens:
 
 As imagens devem ser colocadas neste diretório com os nomes específicos acima.
 
+=======
+Placeholders para imagens:
+
+1. hero-conect.jpg - Segunda foto fornecida (equipe celebrando resultados)
+2. about-conect.webp - Primeira foto fornecida (apresentação com gráficos)
+
+As imagens devem ser colocadas neste diretório com os nomes específicos acima.
+
+>>>>>>> 84c3861b3879420be8d6c49e02d3ad10a4df5ad7

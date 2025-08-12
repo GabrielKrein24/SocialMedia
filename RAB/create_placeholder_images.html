@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -127,3 +128,134 @@ RAB/
 </body>
 </html>
 
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criar Imagens Placeholder</title>
+</head>
+<body>
+    <h1>Imagens Placeholder para o Projeto Conect+</h1>
+    
+    <p>Para adicionar as imagens reais ao projeto:</p>
+    
+    <ol>
+        <li><strong>Hero Image (hero-conect.jpg)</strong>:
+            <ul>
+                <li>Salve a segunda imagem fornecida como <code>public/images/hero-conect.jpg</code></li>
+                <li>Dimensões recomendadas: 1200x800px</li>
+                <li>Formato: JPEG otimizado (qualidade 85%)</li>
+                <li>Alt text: "Equipe da Conect+ celebrando resultados de marketing nas redes sociais"</li>
+            </ul>
+        </li>
+        
+        <li><strong>About Image (about-conect.webp)</strong>:
+            <ul>
+                <li>Salve a primeira imagem fornecida como <code>public/images/about-conect.webp</code></li>
+                <li>Dimensões recomendadas: 1200x800px</li>
+                <li>Formato: WebP otimizado (qualidade 85%)</li>
+                <li>Alt text: "Apresentação da Conect+ com gráficos de desempenho em tela"</li>
+            </ul>
+        </li>
+    </ol>
+    
+    <h2>Comandos para Otimização (se necessário)</h2>
+    
+    <pre><code>
+# Para converter para WebP (usando imagemagick ou cwebp)
+magick hero-image.jpg -quality 85 -resize 1200x800^ public/images/hero-conect.jpg
+cwebp -q 85 -resize 1200 800 about-image.jpg -o public/images/about-conect.webp
+
+# Para otimizar JPEG
+jpegoptim --size=500k public/images/hero-conect.jpg
+    </code></pre>
+    
+    <h2>Estrutura de Arquivos</h2>
+    <pre><code>
+RAB/
+├── index.html
+├── styles.css
+├── script.js
+├── README.md
+└── public/
+    └── images/
+        ├── hero-conect.jpg      # Imagem do hero
+        ├── about-conect.webp    # Imagem da seção sobre
+        └── placeholder.txt      # Este arquivo (pode ser removido)
+    </code></pre>
+    
+    <p><strong>Nota:</strong> As imagens já estão referenciadas no HTML com os paths corretos, lazy loading (exceto hero) e atributos de acessibilidade apropriados.</p>
+    
+    <canvas id="heroCanvas" width="600" height="400" style="border: 1px solid #ccc; margin: 20px 0;"></canvas>
+    <br>
+    <button onclick="downloadHeroImage()">Download Hero Placeholder</button>
+    
+    <canvas id="aboutCanvas" width="600" height="400" style="border: 1px solid #ccc; margin: 20px 0;"></canvas>
+    <br>
+    <button onclick="downloadAboutImage()">Download About Placeholder</button>
+
+    <script>
+        // Create hero placeholder
+        const heroCanvas = document.getElementById('heroCanvas');
+        const heroCtx = heroCanvas.getContext('2d');
+        
+        // Hero background gradient
+        const heroGradient = heroCtx.createLinearGradient(0, 0, 600, 400);
+        heroGradient.addColorStop(0, '#7B2CBF');
+        heroGradient.addColorStop(1, '#FF4F79');
+        
+        heroCtx.fillStyle = heroGradient;
+        heroCtx.fillRect(0, 0, 600, 400);
+        
+        // Hero text
+        heroCtx.fillStyle = 'white';
+        heroCtx.font = 'bold 32px Inter, sans-serif';
+        heroCtx.textAlign = 'center';
+        heroCtx.fillText('Conect+', 300, 150);
+        
+        heroCtx.font = '18px Inter, sans-serif';
+        heroCtx.fillText('Equipe celebrando resultados', 300, 200);
+        heroCtx.fillText('de marketing digital', 300, 230);
+        
+        // Create about placeholder
+        const aboutCanvas = document.getElementById('aboutCanvas');
+        const aboutCtx = aboutCanvas.getContext('2d');
+        
+        // About background
+        aboutCtx.fillStyle = '#F9FAFB';
+        aboutCtx.fillRect(0, 0, 600, 400);
+        
+        // About chart mockup
+        aboutCtx.fillStyle = '#7B2CBF';
+        aboutCtx.fillRect(50, 50, 500, 300);
+        
+        aboutCtx.fillStyle = 'white';
+        aboutCtx.font = 'bold 24px Inter, sans-serif';
+        aboutCtx.textAlign = 'center';
+        aboutCtx.fillText('Performance Dashboard', 300, 100);
+        
+        // Mock chart bars
+        aboutCtx.fillStyle = '#FF4F79';
+        aboutCtx.fillRect(100, 200, 50, 100);
+        aboutCtx.fillRect(200, 150, 50, 150);
+        aboutCtx.fillRect(300, 180, 50, 120);
+        aboutCtx.fillRect(400, 130, 50, 170);
+        
+        function downloadHeroImage() {
+            const link = document.createElement('a');
+            link.download = 'hero-conect.jpg';
+            link.href = heroCanvas.toDataURL('image/jpeg', 0.85);
+            link.click();
+        }
+        
+        function downloadAboutImage() {
+            const link = document.createElement('a');
+            link.download = 'about-conect.jpg';
+            link.href = aboutCanvas.toDataURL('image/jpeg', 0.85);
+            link.click();
+        }
+    </script>
+</body>
+</html>
+
+>>>>>>> 84c3861b3879420be8d6c49e02d3ad10a4df5ad7

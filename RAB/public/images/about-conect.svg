@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="aboutBg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -83,3 +84,90 @@
   <text x="600" y="750" text-anchor="middle" fill="#6B7280" font-size="18" font-family="Inter, sans-serif">Apresentação da Conect+ com gráficos de desempenho em tela</text>
 </svg>
 
+=======
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="aboutBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F9FAFB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B2CBF;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#FF4F79;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#aboutBg)"/>
+  
+  <!-- Screen/Monitor -->
+  <rect x="200" y="150" width="800" height="500" fill="#2D3748" rx="20"/>
+  <rect x="220" y="170" width="760" height="460" fill="url(#screenGradient)" rx="10"/>
+  
+  <!-- Screen content - Dashboard -->
+  <rect x="240" y="200" width="720" height="60" fill="rgba(123,44,191,0.1)" rx="5"/>
+  <text x="250" y="235" fill="#7B2CBF" font-size="24" font-weight="bold" font-family="Inter, sans-serif">Performance Dashboard - Conect+</text>
+  
+  <!-- Charts and graphs -->
+  <!-- Bar chart -->
+  <rect x="260" y="300" width="40" height="80" fill="#7B2CBF" rx="3"/>
+  <rect x="320" y="280" width="40" height="100" fill="#FF4F79" rx="3"/>
+  <rect x="380" y="290" width="40" height="90" fill="#FFA552" rx="3"/>
+  <rect x="440" y="270" width="40" height="110" fill="#7B2CBF" rx="3"/>
+  <rect x="500" y="260" width="40" height="120" fill="#FF4F79" rx="3"/>
+  
+  <!-- Line chart area -->
+  <rect x="600" y="280" width="320" height="150" fill="rgba(123,44,191,0.05)" rx="5"/>
+  <polyline points="620,380 660,350 700,340 740,320 780,310 820,300 860,290 900,280" 
+            stroke="#7B2CBF" stroke-width="3" fill="none"/>
+  <polyline points="620,400 660,390 700,375 740,360 780,350 820,340 860,330 900,320" 
+            stroke="#FF4F79" stroke-width="3" fill="none"/>
+  
+  <!-- Metric cards -->
+  <rect x="260" y="450" width="150" height="80" fill="white" rx="8" stroke="rgba(123,44,191,0.1)" stroke-width="1"/>
+  <text x="270" y="475" fill="#7B2CBF" font-size="14" font-weight="bold" font-family="Inter, sans-serif">Alcance</text>
+  <text x="270" y="500" fill="#2D3748" font-size="24" font-weight="bold" font-family="Inter, sans-serif">2.5M</text>
+  <text x="270" y="520" fill="#10B981" font-size="12" font-family="Inter, sans-serif">+45% ↗</text>
+  
+  <rect x="440" y="450" width="150" height="80" fill="white" rx="8" stroke="rgba(255,79,121,0.1)" stroke-width="1"/>
+  <text x="450" y="475" fill="#FF4F79" font-size="14" font-weight="bold" font-family="Inter, sans-serif">Engajamento</text>
+  <text x="450" y="500" fill="#2D3748" font-size="24" font-weight="bold" font-family="Inter, sans-serif">18.5%</text>
+  <text x="450" y="520" fill="#10B981" font-size="12" font-family="Inter, sans-serif">+32% ↗</text>
+  
+  <rect x="620" y="450" width="150" height="80" fill="white" rx="8" stroke="rgba(255,165,82,0.1)" stroke-width="1"/>
+  <text x="630" y="475" fill="#FFA552" font-size="14" font-weight="bold" font-family="Inter, sans-serif">Conversões</text>
+  <text x="630" y="500" fill="#2D3748" font-size="24" font-weight="bold" font-family="Inter, sans-serif">847</text>
+  <text x="630" y="520" fill="#10B981" font-size="12" font-family="Inter, sans-serif">+28% ↗</text>
+  
+  <!-- Monitor stand -->
+  <rect x="550" y="650" width="100" height="20" fill="#4A5568" rx="10"/>
+  <rect x="580" y="650" width="40" height="50" fill="#4A5568" rx="5"/>
+  
+  <!-- Presentation elements -->
+  <!-- Person silhouette -->
+  <circle cx="150" cy="400" r="40" fill="rgba(123,44,191,0.3)"/>
+  <rect x="130" y="440" width="40" height="80" fill="rgba(123,44,191,0.2)" rx="20"/>
+  
+  <!-- Pointing gesture -->
+  <line x1="190" y1="420" x2="240" y2="380" stroke="rgba(123,44,191,0.5)" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Social media icons around -->
+  <circle cx="1050" cy="200" r="25" fill="rgba(255,79,121,0.2)"/>
+  <text x="1050" y="210" text-anchor="middle" fill="#FF4F79" font-size="20" font-family="Arial">📈</text>
+  
+  <circle cx="1100" cy="300" r="20" fill="rgba(123,44,191,0.2)"/>
+  <text x="1100" y="310" text-anchor="middle" fill="#7B2CBF" font-size="16" font-family="Arial">💡</text>
+  
+  <circle cx="100" cy="200" r="30" fill="rgba(255,165,82,0.2)"/>
+  <text x="100" y="210" text-anchor="middle" fill="#FFA552" font-size="24" font-family="Arial">🎯</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="600" r="8" fill="rgba(123,44,191,0.1)"/>
+  <circle cx="1150" cy="600" r="12" fill="rgba(255,79,121,0.1)"/>
+  <circle cx="1050" cy="700" r="6" fill="rgba(255,165,82,0.1)"/>
+  
+  <!-- Bottom text -->
+  <text x="600" y="750" text-anchor="middle" fill="#6B7280" font-size="18" font-family="Inter, sans-serif">Apresentação da Conect+ com gráficos de desempenho em tela</text>
+</svg>
+
+>>>>>>> 84c3861b3879420be8d6c49e02d3ad10a4df5ad7
