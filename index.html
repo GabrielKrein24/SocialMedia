@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conect+ | Agência de Marketing Digital e Gestão de Mídias Sociais</title>
+    <meta name="description" content="Conect+ - Agência especializada em marketing digital e gestão de mídias sociais. Transformamos sua presença online com estratégias que geram resultados reais.">
+    <meta name="keywords" content="marketing digital, mídias sociais, social media, gestão de redes sociais, publicidade online">
+    <meta property="og:title" content="Conect+ | Agência de Marketing Digital">
+    <meta property="og:description" content="Especialistas em marketing digital e gestão de mídias sociais">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="public/images/hero-conect.jpg">
+    
+    <!-- Performance optimizations -->
+    <link rel="preload" href="public/images/hero-conect.jpg" as="image" type="image/jpeg">
+    <meta name="theme-color" content="#7B2CBF">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Contact form now sends directly via WhatsApp -->
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B2CBF',
+                        secondary: '#FF4F79',
+                        accent: '#FFA552',
+                        neutral: '#F9FAFB',
+                        gray: '#6B7280',
+                        'footer-bg': '#5B5F97'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans bg-neutral">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">C+</span>
+                </div>
+                <span class="text-2xl font-bold text-gray-800">Conect+</span>
+            </div>
+            
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#inicio" class="text-gray-600 hover:text-primary transition-colors">Início</a></li>
+                <li><a href="#servicos" class="text-gray-600 hover:text-primary transition-colors">Serviços</a></li>
+                <li><a href="#portfolio" class="text-gray-600 hover:text-primary transition-colors">Portfólio</a></li>
+                <li><a href="#sobre" class="text-gray-600 hover:text-primary transition-colors">Sobre</a></li>
+                <li><a href="#planos" class="text-gray-600 hover:text-primary transition-colors">Planos</a></li>
+                <li><a href="#blog" class="text-gray-600 hover:text-primary transition-colors">Blog</a></li>
+                <li><a href="#contato" class="text-gray-600 hover:text-primary transition-colors">Contato</a></li>
+            </ul>
+            
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/5551982649682" target="_blank" rel="noopener" 
+                   class="cta-button px-3 py-1 text-sm md:px-4 md:py-2 md:text-base bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-2xl hover:shadow-lg transition-all duration-300 inline-flex items-center space-x-2"
+                   aria-label="Falar no WhatsApp com a Conect+">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Falar no WhatsApp</span>
+                </a>
+                <button class="md:hidden text-gray-600" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden bg-white shadow-lg hidden" id="mobile-menu">
+            <div class="px-6 py-4 space-y-4">
+                <a href="#inicio" class="block text-gray-600 hover:text-primary">Início</a>
+                <a href="#servicos" class="block text-gray-600 hover:text-primary">Serviços</a>
+                <a href="#portfolio" class="block text-gray-600 hover:text-primary">Portfólio</a>
+                <a href="#sobre" class="block text-gray-600 hover:text-primary">Sobre</a>
+                <a href="#planos" class="block text-gray-600 hover:text-primary">Planos</a>
+                <a href="#blog" class="block text-gray-600 hover:text-primary">Blog</a>
+                <a href="#contato" class="block text-gray-600 hover:text-primary">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-[70vh] lg:min-h-[70vh] pt-24 pb-8 lg:pb-12 bg-gradient-to-br from-neutral to-white flex items-center">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <h1 class="text-5xl lg:text-6xl font-bold text-gray-800 mb-4 animate-fade-in">
+                        Conecte sua marca ao
+                        <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            futuro digital
+                        </span>
+                    </h1>
+                    <p class="text-xl text-gray mb-6 leading-relaxed">
+                        Transformamos sua presença digital com estratégias de marketing e gestão de mídias sociais que geram resultados reais e duradouros.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contato" aria-label="Ir para contato" class="cta-button px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center">
+                            Começar Agora
+                        </a>
+                        <a href="#portfolio" aria-label="Ver portfólio" class="px-8 py-4 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300 inline-flex items-center justify-center">
+                            Ver Portfólio
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 lg:pl-12">
+                    <div class="relative">
+                        <div class="w-full h-[40vh] lg:h-[45vh] overflow-hidden rounded-2xl shadow-lg">
+                            <!-- Gradient overlay for better text contrast -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-secondary/20 z-10 rounded-2xl"></div>
+                            <img src="public/images/hero-conect.jpg" 
+                                 alt="Equipe da Conect+ celebrando resultados"
+                                 class="w-full h-full object-cover responsive-image"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                                 srcset="public/images/hero-conect.jpg 1200w"
+                                 fetchpriority="high"
+                                 width="1200" 
+                                 height="800">
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-secondary to-accent rounded-full opacity-20 animate-pulse"></div>
+                        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full opacity-30 animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Nossos Serviços</h2>
+                <p class="text-xl text-gray max-w-2xl mx-auto">
+                    Oferecemos soluções completas em marketing digital para impulsionar seu negócio
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-neutral p-8 rounded-xl hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-share-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Gestão de Mídias Sociais</h3>
+                    <p class="text-gray leading-relaxed">
+                        Criação e gestão estratégica de conteúdo para todas as principais plataformas sociais.
+                    </p>
+                </div>
+                
+                <div class="service-card bg-neutral p-8 rounded-xl hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-bullhorn text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Publicidade Digital</h3>
+                    <p class="text-gray leading-relaxed">
+                        Campanhas publicitárias otimizadas para máximo ROI em Facebook, Instagram e Google Ads.
+                    </p>
+                </div>
+                
+                <div class="service-card bg-neutral p-8 rounded-xl hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Analytics & Relatórios</h3>
+                    <p class="text-gray leading-relaxed">
+                        Análise detalhada de performance e relatórios personalizados para acompanhar resultados.
+                    </p>
+                </div>
+                
+                <div class="service-card bg-neutral p-8 rounded-xl hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-pencil-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Criação de Conteúdo</h3>
+                    <p class="text-gray leading-relaxed">
+                        Produção de conteúdo visual e textual alinhado com a identidade da sua marca.
+                    </p>
+                </div>
+                
+                <div class="service-card bg-neutral p-8 rounded-xl hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-search text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">SEO & SEM</h3>
+                    <p class="text-gray leading-relaxed">
+                        Otimização para mecanismos de busca e marketing de busca para aumentar visibilidade.
+                    </p>
+                </div>
+                
+                <div class="service-card bg-neutral p-8 rounded-xl hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Influencer Marketing</h3>
+                    <p class="text-gray leading-relaxed">
+                        Conectamos sua marca com influenciadores relevantes para amplificar seu alcance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Social -->
+    <section class="py-20 bg-gradient-to-r from-primary/5 to-secondary/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Resultados que Falam por Si</h2>
+                <p class="text-xl text-gray max-w-2xl mx-auto">
+                    Mais de 500 empresas confiam na Conect+ para transformar sua presença digital
+                </p>
+            </div>
+            
+            <!-- Métricas -->
+            <div class="grid md:grid-cols-4 gap-8 mb-16 metrics-section">
+                <div class="text-center">
+                    <div class="counter text-4xl font-bold text-primary mb-2" data-target="100">100</div>
+                    <p class="text-gray font-semibold">Clientes Atendidos</p>
+                </div>
+                <div class="text-center">
+                    <div class="counter text-4xl font-bold text-secondary mb-2" data-target="2000000">2M</div>
+                    <p class="text-gray font-semibold">Visualizações Alcançadas</p>
+                </div>
+                <div class="text-center">
+                    <div class="counter text-4xl font-bold text-primary mb-2" data-target="95">95%</div>
+                    <p class="text-gray font-semibold">% de Satisfação</p>
+                </div>
+                <div class="text-center">
+                    <div class="counter text-4xl font-bold text-secondary mb-2" data-target="1">1</div>
+                    <p class="text-gray font-semibold">Ano de Experiência</p>
+                </div>
+            </div>
+            
+            <!-- Depoimentos -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">MR</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Maria Rodrigues</h4>
+                            <p class="text-gray text-sm">CEO, TechStartup</p>
+                        </div>
+                    </div>
+                    <p class="text-gray leading-relaxed">
+                        "A Conect+ transformou nossa presença digital. Em 6 meses, triplicamos nosso engajamento e aumentamos as vendas em 150%."
+                    </p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-secondary to-accent rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">JS</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">João Silva</h4>
+                            <p class="text-gray text-sm">Diretor, Varejo Plus</p>
+                        </div>
+                    </div>
+                    <p class="text-gray leading-relaxed">
+                        "Profissionais excepcionais! O ROI das campanhas superou todas nossas expectativas. Recomendo de olhos fechados."
+                    </p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">AC</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Ana Costa</h4>
+                            <p class="text-gray text-sm">Fundadora, EcoBrand</p>
+                        </div>
+                    </div>
+                    <p class="text-gray leading-relaxed">
+                        "Estratégia impecável e resultados consistentes. Nossa marca nunca teve tanta visibilidade e engajamento."
+                    </p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfólio -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Portfólio</h2>
+                <p class="text-xl text-gray max-w-2xl mx-auto">
+                    Conheça alguns dos projetos que desenvolvemos com paixão e dedicação
+                </p>
+            </div>
+            
+            <div class="portfolio-slider relative">
+                <div class="portfolio-container flex transition-transform duration-500">
+                    <div class="portfolio-item min-w-full md:min-w-1/3 px-4">
+                        <div class="bg-neutral rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                                <i class="fas fa-store text-6xl text-primary/50"></i>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">E-commerce Fashion</h3>
+                                <p class="text-gray mb-4">Aumento de 300% nas vendas online através de estratégias integradas de social media e ads.</p>
+                                <div class="flex space-x-2">
+                                    <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Instagram</span>
+                                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">Facebook Ads</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item min-w-full md:min-w-1/3 px-4">
+                        <div class="bg-neutral rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="h-48 bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
+                                <i class="fas fa-utensils text-6xl text-secondary/50"></i>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Restaurante Gourmet</h3>
+                                <p class="text-gray mb-4">Gestão completa de redes sociais resultando em 250% mais reservas mensais.</p>
+                                <div class="flex space-x-2">
+                                    <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">TikTok</span>
+                                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">Google Ads</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item min-w-full md:min-w-1/3 px-4">
+                        <div class="bg-neutral rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                            <div class="h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-6xl text-primary/50"></i>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">EdTech Startup</h3>
+                                <p class="text-gray mb-4">Crescimento de 500% na base de usuários através de campanhas segmentadas.</p>
+                                <div class="flex space-x-2">
+                                    <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">LinkedIn</span>
+                                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">YouTube</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="portfolio-prev absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="portfolio-next absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="py-20 bg-gradient-to-r from-neutral to-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Sobre a Conect+</h2>
+                    <p class="text-xl text-gray mb-8 leading-relaxed">
+                        Somos uma agência jovem e inovadora, especializada em conectar marcas ao mundo digital. 
+                        Nossa missão é transformar a presença online dos nossos clientes através de estratégias 
+                        criativas e orientadas por dados.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-rocket text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Inovação Constante</h3>
+                                <p class="text-gray">Sempre atualizados com as últimas tendências e tecnologias do mercado digital.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-gradient-to-r from-secondary to-accent rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-chart-bar text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Resultados Mensuráveis</h3>
+                                <p class="text-gray">Focamos em métricas que realmente importam para o crescimento do seu negócio.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-heart text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Atendimento Personalizado</h3>
+                                <p class="text-gray">Cada cliente é único, por isso desenvolvemos estratégias sob medida.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <div class="w-full h-96 lg:h-[480px] overflow-hidden rounded-2xl shadow-lg">
+                            <img src="public/images/about-conect.webp" 
+                                 alt="Apresentação com gráficos de desempenho em tela"
+                                 class="w-full h-full object-cover" 
+                                 loading="lazy"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                                 srcset="public/images/about-conect.webp 1200w"
+                                 width="1200" 
+                                 height="800">
+                        </div>
+                        <div class="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-r from-secondary to-accent rounded-full opacity-20"></div>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-primary to-secondary rounded-full opacity-30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos e Pacotes -->
+    <section id="planos" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Planos e Pacotes</h2>
+                <p class="text-xl text-gray max-w-2xl mx-auto">
+                    Escolha o plano ideal para impulsionar sua presença digital
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Plano Básico -->
+                <div class="bg-neutral p-8 rounded-xl border-2 border-transparent hover:border-primary/20 transition-all">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Básico</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">R$ 19,90</div>
+                        <p class="text-gray">por mês</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span class="text-gray">Gestão de 2 redes sociais</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span class="text-gray">15 posts por mês</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span class="text-gray">Stories semanais</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span class="text-gray">Relatório mensal</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span class="text-gray">Suporte via WhatsApp</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/5551982649682?text=Olá! Tenho interesse no Plano Básico (R$ 19,90)" 
+                       target="_blank" rel="noopener"
+                       class="w-full py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-colors block text-center"
+                       aria-label="Contratar Plano Básico via WhatsApp">
+                        Escolher Plano
+                    </a>
+                </div>
+                
+                <!-- Plano Profissional -->
+                <div class="bg-gradient-to-br from-primary to-secondary p-8 rounded-xl text-white relative transform scale-105">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-accent px-4 py-2 rounded-full text-sm font-semibold">
+                        Mais Popular
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Profissional</h3>
+                        <div class="text-4xl font-bold mb-2">R$ 59,90</div>
+                        <p class="text-white/80">por mês</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-3"></i>
+                            <span>Gestão de 4 redes sociais</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-3"></i>
+                            <span>30 posts por mês</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-3"></i>
+                            <span>Stories diários</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-3"></i>
+                            <span>Campanhas pagas básicas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-3"></i>
+                            <span>Relatórios quinzenais</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-3"></i>
+                            <span>Suporte prioritário</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/5551982649682?text=Olá! Tenho interesse no Plano Profissional (R$ 59,90)" 
+                       target="_blank" rel="noopener"
+                       class="w-full py-3 bg-white text-primary font-semibold rounded-lg hover:bg-neutral transition-colors block text-center"
+                       aria-label="Contratar Plano Profissional via WhatsApp">
+                        Escolher Plano
+                    </a>
+                </div>
+                
+                <!-- Plano Premium -->
+                <div class="bg-neutral p-8 rounded-xl border-2 border-transparent hover:border-primary/20 transition-all">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Premium</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">R$ 129,90</div>
+                        <p class="text-gray">por mês</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span class="text-gray">Gestão ilimitada de redes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span class="text-gray">60 posts por mês</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span class="text-gray">Stories e Reels diários</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span class="text-gray">Campanhas pagas avançadas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span class="text-gray">Relatórios semanais</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span class="text-gray">Consultoria estratégica</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/5551982649682?text=Olá! Tenho interesse no Plano Premium (R$ 129,90)" 
+                       target="_blank" rel="noopener"
+                       class="w-full py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-colors block text-center"
+                       aria-label="Contratar Plano Premium via WhatsApp">
+                        Escolher Plano
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="py-20 bg-gradient-to-r from-primary/5 to-secondary/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Blog</h2>
+                <p class="text-xl text-gray max-w-2xl mx-auto">
+                    Fique por dentro das últimas tendências e dicas de marketing digital
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-6xl text-primary/50"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray mb-3">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            <span>15 Jan 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            10 Tendências de Social Media para 2024
+                        </h3>
+                        <p class="text-gray mb-4">
+                            Descubra as principais tendências que dominarão as redes sociais neste ano e como aplicá-las na sua estratégia.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:underline">
+                            Ler mais →
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
+                        <i class="fas fa-chart-pie text-6xl text-secondary/50"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray mb-3">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            <span>12 Jan 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            Como Medir ROI em Campanhas Digitais
+                        </h3>
+                        <p class="text-gray mb-4">
+                            Aprenda a calcular e otimizar o retorno sobre investimento das suas campanhas de marketing digital.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:underline">
+                            Ler mais →
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                        <i class="fas fa-video text-6xl text-primary/50"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray mb-3">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            <span>08 Jan 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            O Poder do Vídeo Marketing em 2024
+                        </h3>
+                        <p class="text-gray mb-4">
+                            Por que o conteúdo em vídeo é fundamental para o sucesso da sua marca nas redes sociais.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:underline">
+                            Ler mais →
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
+                <p class="text-xl text-gray max-w-2xl mx-auto">
+                    Pronto para transformar sua presença digital? Vamos conversar!
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Fale Conosco</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Telefone</h4>
+                                    <p class="text-gray">(51) 98264-9682</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-secondary to-accent rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">E-mail</h4>
+                                    <p class="text-gray">Becaboliveira08@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Localização</h4>
+                                    <p class="text-gray">Estância Velha, RS - Brasil</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-gray-800 mb-4">Nos siga nas redes sociais</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center text-white hover:scale-110 transition-transform">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center text-white hover:scale-110 transition-transform">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center text-white hover:scale-110 transition-transform">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center text-white hover:scale-110 transition-transform">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <form id="contact-form" class="contact-form space-y-6">
+                            <div>
+                                <label for="nome" class="block text-sm font-semibold text-gray-800 mb-2">Nome</label>
+                                <input type="text" id="nome" name="nome" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-gray-800 mb-2">E-mail</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="telefone" class="block text-sm font-semibold text-gray-800 mb-2">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label for="servico" class="block text-sm font-semibold text-gray-800 mb-2">Serviço de Interesse</label>
+                                <select id="servico" name="servico" required 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option value="">Selecione um serviço</option>
+                                    <option value="gestao-midias">Gestão de Mídias Sociais</option>
+                                    <option value="publicidade">Publicidade Digital</option>
+                                    <option value="criacao-conteudo">Criação de Conteúdo</option>
+                                    <option value="seo-sem">SEO & SEM</option>
+                                    <option value="influencer">Influencer Marketing</option>
+                                    <option value="consultoria">Consultoria Completa</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="mensagem" class="block text-sm font-semibold text-gray-800 mb-2">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" rows="4" required 
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                                          placeholder="Conte-nos sobre seu projeto..."></textarea>
+                            </div>
+                            
+                            <button id="enviar-mensagem" type="submit" class="w-full py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-footer-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">C+</span>
+                        </div>
+                        <span class="text-2xl font-bold">Conect+</span>
+                    </div>
+                    <p class="text-gray-200 leading-relaxed">
+                        Conectando marcas ao futuro digital através de estratégias inovadoras e resultados mensuráveis.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-6">Serviços</h4>
+                    <ul class="space-y-3 text-gray-200">
+                        <li><a href="#" class="hover:text-secondary transition-colors">Gestão de Mídias Sociais</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Publicidade Digital</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Criação de Conteúdo</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">SEO & SEM</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Analytics</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-6">Links Úteis</h4>
+                    <ul class="space-y-3 text-gray-200">
+                        <li><a href="#sobre" class="hover:text-secondary transition-colors">Sobre Nós</a></li>
+                        <li><a href="#portfolio" class="hover:text-secondary transition-colors">Portfólio</a></li>
+                        <li><a href="#blog" class="hover:text-secondary transition-colors">Blog</a></li>
+                        <li><a href="#contato" class="hover:text-secondary transition-colors">Contato</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-6">Contato</h4>
+                    <div class="space-y-3 text-gray-200">
+                        <p class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            (51) 98264-9682
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            Becaboliveira08@gmail.com
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            Estância Velha, RS
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-200">
+                <p>&copy; 2024 Conect+. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5551982649682" target="_blank" rel="noopener"
+       class="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-primary to-secondary text-white rounded-full flex items-center justify-center text-2xl hover:shadow-xl transition-all duration-300 shadow-lg z-50 animate-pulse-glow"
+       aria-label="Falar conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
